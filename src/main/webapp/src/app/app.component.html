@@ -1,0 +1,39 @@
+<h1>
+  {{title}}
+</h1>
+<button (click)="fillDepartures()">Refresh departures</button>
+<button (click)="fillArrivals()">Refresh arrivals</button>
+
+<h1>
+  Top 10 Pulkovo departures. By time {{departuresByTime}}
+</h1>
+<div class="panel-body">
+
+  <table>
+    <tr>
+      <th *ngFor="let c of columns">{{c}}</th>
+    </tr>
+    <tr class="component-style" *ngFor="let ch of departures">
+      <td *ngFor="let col of columns">
+        {{ch[col]}}
+      </td>
+    </tr>
+  </table>
+</div>
+
+<h1>
+  Top 10 Pulkovo arrivals. By time {{arrivalsByTime}}
+</h1>
+<div class="panel-body">
+
+  <table>
+    <tr>
+      <th *ngFor="let c of columns">{{c}}</th>
+    </tr>
+    <tr class="component-style" *ngFor="let ch of arrivals">
+      <td *ngFor="let col of columns">
+        {{ch[col]}}
+      </td>
+    </tr>
+  </table>
+</div>

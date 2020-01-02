@@ -14,7 +14,7 @@ open class PulkovoClient(
         private val objectMapper: ObjectMapper
 ) {
 
-    fun getArrivals(): List<FlightDto>? {
+    fun getArrivals(): PulkovoResponse? {
         val body = restTemplate
                 .getForEntity(
                         airportConfig.pulkovo.arrives,
@@ -23,10 +23,9 @@ open class PulkovoClient(
 
         objectMapper.registerModule(JavaTimeModule())
         return objectMapper.readValue(body, PulkovoResponse::class.java)
-                .data
     }
 
-    fun getDepartures(): List<FlightDto>? {
+    fun getDepartures(): PulkovoResponse? {
         val body = restTemplate
                 .getForEntity(
                         airportConfig.pulkovo.departures,
@@ -35,7 +34,6 @@ open class PulkovoClient(
 
         objectMapper.registerModule(JavaTimeModule())
         return objectMapper.readValue(body, PulkovoResponse::class.java)
-                .data
     }
 
 }
