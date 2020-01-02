@@ -3,3 +3,8 @@ server:
   port: 9090
   servlet:
     contextPath: /
+
+airport:
+  pulkovo:
+    departures: https://pulkovoairport.ru/f/flights/cur/en_dep_1.js
+    arrives: https://pulkovoairport.ru/f/flights/cur/en_arr_1.js
