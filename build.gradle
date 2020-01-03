@@ -1,5 +1,6 @@
 buildscript {
     ext.kotlin_version = '1.3.61'
+    ext.springBootVersion = '2.0.1.RELEASE'
     repositories {
         mavenCentral()
 
@@ -8,13 +9,16 @@ buildscript {
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath('org.jetbrains.kotlin:kotlin-allopen:1.3.41')
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion")
     }
 }
 
 apply plugin: 'kotlin'
+//apply plugin: 'java'
 apply plugin: 'application'
 apply plugin: 'idea'
 apply plugin: 'groovy'
+apply plugin: 'org.springframework.boot'
 
 mainClassName = 'com.per.aero_checker.ApplicationKt'
 def webappDir = "$projectDir/src/main/webapp"
