@@ -2,8 +2,9 @@ package com.per.aero_checker.client
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule
-import com.per.aero_checker.api.FlightDto
 import com.per.aero_checker.configuration.AirportConfig
+import com.per.aero_checker.configuration.CacheConfiguration
+import org.springframework.cache.annotation.Cacheable
 import org.springframework.stereotype.Service
 import org.springframework.web.client.RestTemplate
 
@@ -14,7 +15,8 @@ open class PulkovoClient(
         private val objectMapper: ObjectMapper
 ) {
 
-    fun getArrivals(): PulkovoResponse? {
+    @Cacheable(CacheConfiguration.CACHE_ONE)
+    open fun getArrivals(): PulkovoResponse? {
         val body = restTemplate
                 .getForEntity(
                         airportConfig.pulkovo.arrives,
@@ -25,7 +27,8 @@ open class PulkovoClient(
         return objectMapper.readValue(body, PulkovoResponse::class.java)
     }
 
-    fun getDepartures(): PulkovoResponse? {
+    @Cacheable(CacheConfiguration.CACHE_ONE)
+    open fun getDepartures(): PulkovoResponse? {
         val body = restTemplate
                 .getForEntity(
                         airportConfig.pulkovo.departures,
