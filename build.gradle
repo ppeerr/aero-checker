@@ -75,6 +75,10 @@ jar {
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
 }
 
+bootJar {
+    launchScript()
+}
+
 task buildAngular(type:Exec) {
     // installAngular should be run prior to this task
     dependsOn "installAngular"
