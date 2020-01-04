@@ -27,9 +27,10 @@
     "@angular/http": "latest"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.803.21",
-    "@angular/cli": "^8.3.21",
+    "@angular-devkit/build-angular": "0.803.20",
+    "@angular/cli": "8.3.20",
     "@angular/compiler-cli": "^8.2.14",
+    "@angular/http": "latest",
     "@types/jasmine": "2.5.38",
     "@types/node": "~6.0.60",
     "codelyzer": "^5.0.1",
@@ -44,7 +45,6 @@
     "protractor": "^6.0.0",
     "ts-node": "~2.0.0",
     "tslint": "~4.5.0",
-    "typescript": "~3.5.3",
-    "@angular/http": "latest"
+    "typescript": "~3.5.3"
   }
 }
