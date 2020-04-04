@@ -27,7 +27,7 @@ open class CacheConfiguration {
     }
 
     companion object {
-        const val CACHE_ONE = "pulkovoDeparturesCache"
-        const val CACHE_TWO = "pulkovoArrivalsCache"
+        const val CACHE_ONE = "pulkovoArrivalsCache"
+        const val CACHE_TWO = "pulkovoDeparturesCache"
     }
 }

@@ -1,5 +1,7 @@
 package com.per.aero_checker.configuration
 
+import com.fasterxml.jackson.databind.ObjectMapper
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.web.client.RestTemplate
@@ -9,5 +11,13 @@ open class AppConfiguration {
     @Bean
     open fun restTemplate(): RestTemplate {
         return RestTemplate()
+    }
+
+    @Bean
+    open fun objectMapper(): ObjectMapper {
+        val objectMapper = ObjectMapper()
+        objectMapper.registerModule(JavaTimeModule())
+
+        return objectMapper
     }
 }

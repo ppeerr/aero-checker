@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service
 open class FlightService(
         private val pulkovoClient: PulkovoClient
 ) {
-    val logger by logger()
+    private val logger by logger()
 
     fun getPulkovoArrivals(): PulkovoResponse? {
         logger.info("getPulkovoArrivals started")

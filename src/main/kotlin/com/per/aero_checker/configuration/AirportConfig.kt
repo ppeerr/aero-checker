@@ -7,7 +7,7 @@ data class AirportConfig(
         val pulkovo: FlightConfig = FlightConfig()
 )
 
-data class FlightConfig (
-    var departures: String ?= null,
-    var arrives: String ?= null
+data class FlightConfig(
+        var departures: String? = null,
+        var arrives: String? = null
 )
