@@ -1,6 +1,6 @@
 package com.per.aero_checker.controller
 
-import com.per.aero_checker.api.FlightDto
+import com.per.aero_checker.api.SearchCriteria
 import com.per.aero_checker.client.PulkovoResponse
 import com.per.aero_checker.service.FlightService
 import org.springframework.web.bind.annotation.GetMapping
@@ -13,17 +13,23 @@ open class PulkovoFlightController(
         val flightService: FlightService
 ) {
 
-    @GetMapping("/arrivals")
-    fun getPulkovoArrivals(): PulkovoResponse? {
-        val pulkovoArrivals = flightService.getPulkovoArrivals()
-
-        return pulkovoArrivals
+    @GetMapping("/arrivals/earliest")
+    fun getPulkovoArrivals(): PulkovoResponse {
+        return flightService.getEarliestPulkovoArrivals()
     }
 
-    @GetMapping("/departures")
-    fun getPulkovoDepartures(): PulkovoResponse? {
-        val pulkovoDepartures = flightService.getPulkovoDepartures()
+    @GetMapping("/arrivals/search")
+    fun searchPulkovoArrivals(searchCriteria: SearchCriteria): PulkovoResponse {
+        return flightService.searchPulkovoArrivals(searchCriteria)
+    }
 
-        return pulkovoDepartures
+    @GetMapping("/departures/earliest")
+    fun getPulkovoDepartures(): PulkovoResponse {
+        return flightService.getEarliestPulkovoDepartures()
+    }
+
+    @GetMapping("/departures/search")
+    fun searchPulkovoDepartures(criteria: SearchCriteria): PulkovoResponse {
+        return flightService.searchPulkovoDepartures(criteria)
     }
 }

@@ -15,12 +15,12 @@ open class PulkovoClient(
 ) {
 
     @Cacheable(CacheConfiguration.CACHE_ONE)
-    open fun getArrivals(): PulkovoResponse? {
+    open fun getArrivals(): PulkovoResponse {
         return getSortedResponse(airportConfig.pulkovo.arrives!!)
     }
 
     @Cacheable(CacheConfiguration.CACHE_TWO)
-    open fun getDepartures(): PulkovoResponse? {
+    open fun getDepartures(): PulkovoResponse {
         return getSortedResponse(airportConfig.pulkovo.departures!!)
     }
 
