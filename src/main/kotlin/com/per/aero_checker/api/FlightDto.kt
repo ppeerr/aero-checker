@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonFormat
 import java.time.LocalDateTime
 
 class FlightDto {
-    var id: Int? = null
     var day: Int? = null
     var past: Boolean? = null
     var number: String? = null

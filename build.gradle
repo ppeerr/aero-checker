@@ -45,6 +45,7 @@ dependencies {
 //    kapt "org.springframework.boot:spring-boot-configuration-processor"
     compile "org.springframework.boot:spring-boot-configuration-processor:2.0.1.RELEASE"
     compile("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.5")
+    compile("com.fasterxml.jackson.module:jackson-module-kotlin:2.9.5")
 
     compile 'com.google.guava:guava:18.0'
     compile 'org.springframework:spring-context-support:4.1.7.RELEASE'

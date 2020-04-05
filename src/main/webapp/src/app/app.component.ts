@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Http } from '@angular/http';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +7,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
-  result = '';
+  title = 'Aero checker';
 
   columns = [];
 
@@ -25,7 +23,6 @@ export class AppComponent {
 
   ngOnInit() {
     this.columns = [
-      'id',
       'number',
       'status',
       'date',
@@ -33,13 +30,7 @@ export class AppComponent {
     ];
   }
 
-  private sayHello(): void {
-    this.result = 'loading...';
-    this.http.get(`/api/hello-world`).subscribe(response => this.result = response.text());
-  }
-
   private fillDepartures(): void {
-    // this.departures = [];
     this.http.get(`/flight/pulkovo/departures`)
       .subscribe(response => {
         let resp = response.json();
