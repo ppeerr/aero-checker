@@ -1,0 +1,66 @@
+[
+  {
+    "PlaceId":"MOSC-sky",
+    "PlaceName":"Moscow",
+    "CountryId":"RU-sky",
+    "RegionId":"",
+    "CityId":"MOSC-sky",
+    "CountryName":"Россия"
+  },
+  {
+    "PlaceId":"VKO-sky",
+    "PlaceName":"Moscow Vnukovo",
+    "CountryId":"RU-sky",
+    "RegionId":"",
+    "CityId":"MOSC-sky",
+    "CountryName":"Россия"
+  },
+  {
+    "PlaceId":"DME-sky",
+    "PlaceName":"Moscow Domodedovo",
+    "CountryId":"RU-sky",
+    "RegionId":"",
+    "CityId":"MOSC-sky",
+    "CountryName":"Россия"
+  },
+  {
+    "PlaceId":"SVO-sky",
+    "PlaceName":"Moscow Sheremetyevo",
+    "CountryId":"RU-sky",
+    "RegionId":"",
+    "CityId":"MOSC-sky",
+    "CountryName":"Россия"
+  },
+  {
+    "PlaceId":"ZIA-sky",
+    "PlaceName":"Moscow Zhukovsky",
+    "CountryId":"RU-sky",
+    "RegionId":"",
+    "CityId":"MOSC-sky",
+    "CountryName":"Россия"
+  },
+  {
+    "PlaceId":"TOF-sky",
+    "PlaceName":"Tomsk",
+    "CountryId":"RU-sky",
+    "RegionId":"",
+    "CityId":"TOMS-sky",
+    "CountryName":"Россия"
+  },
+  {
+    "PlaceId":"OMS-sky",
+    "PlaceName":"Omsk",
+    "CountryId":"RU-sky",
+    "RegionId":"",
+    "CityId":"OMSK-sky",
+    "CountryName":"Россия"
+  },
+  {
+    "PlaceId":"LED-sky",
+    "PlaceName":"Санкт-Петербург Пулково",
+    "CountryId":"RU-sky",
+    "RegionId":"",
+    "CityId":"PETE-sky",
+    "CountryName":"Россия"
+  }
+]

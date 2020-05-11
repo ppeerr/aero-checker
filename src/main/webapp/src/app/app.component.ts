@@ -31,7 +31,7 @@ export class AppComponent {
   }
 
   private fillDepartures(): void {
-    this.http.get(`/flight/pulkovo/departures`)
+    this.http.get(`/schedule/pulkovo/departures/earliest`)
       .subscribe(response => {
         let resp = response.json();
 
@@ -42,7 +42,7 @@ export class AppComponent {
 
   private fillArrivals(): void {
     this.arrivals = [];
-    this.http.get(`/flight/pulkovo/arrivals`)
+    this.http.get(`/schedule/pulkovo/arrivals/earliest`)
       .subscribe(response => {
         let resp = response.json();
 

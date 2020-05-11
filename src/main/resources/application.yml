@@ -8,3 +8,10 @@ airport:
   pulkovo:
     departures: https://pulkovoairport.ru/f/flights/cur/en_dep_1.js
     arrives: https://pulkovoairport.ru/f/flights/cur/en_arr_1.js
+
+flights:
+  skyscanner:
+    version: "v1.0"
+    url: "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices"
+    rapidApiHost: "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com"
+    rapidApiKey: "4835c8b973msh4825a9457cf934bp19fc56jsn3541d083a8b7"

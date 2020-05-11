@@ -26,8 +26,16 @@ open class CacheConfiguration {
                 .build())
     }
 
+    @Bean
+    open fun cacheThree(): Cache? {
+        return GuavaCache(CACHE_THREE, CacheBuilder.newBuilder()
+                .expireAfterWrite(5, TimeUnit.MINUTES)
+                .build())
+    }
+
     companion object {
         const val CACHE_ONE = "pulkovoArrivalsCache"
         const val CACHE_TWO = "pulkovoDeparturesCache"
+        const val CACHE_THREE = "skysacnnerPlacesCache"
     }
 }
