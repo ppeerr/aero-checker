@@ -1,18 +1,20 @@
-package com.per.aero_checker.client
+package com.per.aero_checker.client.pulkovo
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.per.aero_checker.configuration.AirportConfig
 import com.per.aero_checker.configuration.CacheConfiguration
+import com.per.aero_checker.service.logger
 import org.springframework.cache.annotation.Cacheable
-import org.springframework.stereotype.Service
+import org.springframework.stereotype.Component
 import org.springframework.web.client.RestTemplate
 
-@Service
+@Component
 open class PulkovoClient(
         private val airportConfig: AirportConfig,
         private val restTemplate: RestTemplate,
         private val objectMapper: ObjectMapper
 ) {
+    private val logger by logger()
 
     @Cacheable(CacheConfiguration.CACHE_ONE)
     open fun getArrivals(): PulkovoResponse {

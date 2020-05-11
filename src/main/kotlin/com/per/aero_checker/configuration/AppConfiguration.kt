@@ -5,13 +5,18 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
+import org.springframework.http.converter.StringHttpMessageConverter
 import org.springframework.web.client.RestTemplate
+import java.nio.charset.Charset
 
 @Configuration
 open class AppConfiguration {
     @Bean
     open fun restTemplate(): RestTemplate {
-        return RestTemplate()
+        val restTemplate = RestTemplate()
+        restTemplate.messageConverters
+                .add(0, StringHttpMessageConverter(Charset.forName("UTF-8")));
+        return restTemplate
     }
 
     @Bean
