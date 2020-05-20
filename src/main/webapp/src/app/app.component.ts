@@ -7,7 +7,7 @@ import { Http } from '@angular/http';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Aero checker v3.1';
+  title = 'Aero checker v0.0.3';
 
   columns = [];
 
