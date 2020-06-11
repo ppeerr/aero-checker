@@ -15,3 +15,9 @@ flights:
     url: "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices"
     rapidApiHost: "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com"
     rapidApiKey: "4835c8b973msh4825a9457cf934bp19fc56jsn3541d083a8b7"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: prometheus, env
